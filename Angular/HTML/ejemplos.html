@@ -1,0 +1,12 @@
+<!- Select con options ->
+<ng-select [searchable]="false"
+           [clearable]="true"
+           [clearOnBackspace]="true"
+           placeholder="Texto inicial ..."
+           [(ngModel)]="nombreVariableSeleccionada"
+           [disabled]="false">
+    <ng-option *ngFor="let opcion of listaDeOpciones"
+               [value]="opcion.value">{{ opcion.label }}
+    </ng-option>
+</ng-select>
+
